@@ -1,0 +1,31 @@
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <!-- Styles -->
+    <Style id="high">
+      <PolyStyle><color>7d00ff00</color></PolyStyle>
+    </Style>
+    <Style id="medium">
+      <PolyStyle><color>7d00ffff</color></PolyStyle>
+    </Style>
+    <Style id="low">
+      <PolyStyle><color>7d007fff</color></PolyStyle>
+    </Style>
+    <Style id="unsuitable">
+      <PolyStyle><color>7d0000ff</color></PolyStyle>
+    </Style>
+
+    <!-- Grid Tiles -->
+    <Placemark><styleUrl>#high</styleUrl><Polygon><outerBoundaryIs><LinearRing><coordinates>77.13,31.05,0 77.14,31.05,0 77.14,31.06,0 77.13,31.06,0 77.13,31.05,0</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
+    <Placemark><styleUrl>#medium</styleUrl><Polygon><outerBoundaryIs><LinearRing><coordinates>77.14,31.05,0 77.15,31.05,0 77.15,31.06,0 77.14,31.06,0 77.14,31.05,0</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
+    <Placemark><styleUrl>#low</styleUrl><Polygon><outerBoundaryIs><LinearRing><coordinates>77.15,31.05,0 77.16,31.05,0 77.16,31.06,0 77.15,31.06,0 77.15,31.05,0</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
+    <Placemark><styleUrl>#unsuitable</styleUrl><Polygon><outerBoundaryIs><LinearRing><coordinates>77.16,31.05,0 77.17,31.05,0 77.17,31.06,0 77.16,31.06,0 77.16,31.05,0</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
+
+    <Placemark><styleUrl>#medium</styleUrl><Polygon><outerBoundaryIs><LinearRing><coordinates>77.13,31.06,0 77.14,31.06,0 77.14,31.07,0 77.13,31.07,0 77.13,31.06,0</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
+    <Placemark><styleUrl>#unsuitable</styleUrl><Polygon><outerBoundaryIs><LinearRing><coordinates>77.14,31.06,0 77.15,31.06,0 77.15,31.07,0 77.14,31.07,0 77.14,31.06,0</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
+    <Placemark><styleUrl>#high</styleUrl><Polygon><outerBoundaryIs><LinearRing><coordinates>77.15,31.06,0 77.16,31.06,0 77.16,31.07,0 77.15,31.07,0 77.15,31.06,0</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
+    <Placemark><styleUrl>#low</styleUrl><Polygon><outerBoundaryIs><LinearRing><coordinates>77.16,31.06,0 77.17,31.06,0 77.17,31.07,0 77.16,31.07,0 77.16,31.06,0</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
+
+    <!-- You can continue extending this grid -->
+  </Document>
+</kml>
+

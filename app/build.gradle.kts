@@ -51,5 +51,6 @@ dependencies {
     implementation(libs.androidx.gms.maps)
     implementation(libs.androidx.gms.location)
     implementation(libs.androidx.libraries.places)
+    implementation(libs.androidx.lmaps.utils)
 
 }

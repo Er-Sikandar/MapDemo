@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.taxi.apps.databinding.ActivityMainBinding
+import com.taxi.apps.ui.KmlActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -21,8 +22,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         lifecycleScope.launch {
-          delay(5000)
-          startActivity(Intent(this@MainActivity,DashboardActivity::class.java))
+          delay(1000)
+          startActivity(Intent(this@MainActivity, KmlActivity::class.java))
           finish()
         }
 
