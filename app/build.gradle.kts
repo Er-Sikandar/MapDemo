@@ -53,4 +53,8 @@ dependencies {
     implementation(libs.androidx.libraries.places)
     implementation(libs.androidx.lmaps.utils)
 
+    implementation(libs.test.mockito)
+  //  implementation(libs.test.mockito.inline)
+    implementation(libs.test.mockito.kotlin)
+
 }

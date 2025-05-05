@@ -1,6 +1,7 @@
 package com.taxi.apps.ui
 
 import android.app.Dialog
+import android.graphics.Color
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
@@ -15,7 +16,11 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.PolygonOptions
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.maps.android.data.geojson.GeoJsonLayer
+import com.google.maps.android.data.geojson.GeoJsonPolygon
+import com.google.maps.android.data.geojson.GeoJsonPolygonStyle
 import com.google.maps.android.data.kml.KmlContainer
 import com.google.maps.android.data.kml.KmlLayer
 import com.google.maps.android.data.kml.KmlPolygon
@@ -72,7 +77,6 @@ class KmlActivity : AppCompatActivity(), OnMapReadyCallback{
                         }
                         val center = getPolygonCenter(outerBoundary)
                         currentPolygonMarker?.remove()
-                        val markerIcon = BitmapDescriptorFactory.fromResource(R.drawable.ic_location_pin)
                         currentPolygonMarker=mMap?.addMarker(MarkerOptions()
                             .position(center)
                             .title("Polygon Clicked")
@@ -85,10 +89,57 @@ class KmlActivity : AppCompatActivity(), OnMapReadyCallback{
                 moveCamHere(container)
             }
         } catch (e: Exception) {
-            Log.e(TAG, "onMapReady Ex: ${e.message}")
+            Log.e(TAG, "onMapReady Exception: ${e.message}")
             e.printStackTrace()
         }
 
+       /* try {
+            val geoJsonLayer = GeoJsonLayer(mMap, R.raw.new_geo_map, applicationContext)
+            geoJsonLayer.addLayerToMap()
+            geoJsonLayer.setOnFeatureClickListener { feature ->
+                Log.e("GEOJSON_CLICK", "Clicked feature with ID: ${feature.properties}")
+                val name = feature.getProperty("name")
+                areaSuitability =name.toString()
+                val geometry = feature.geometry
+                if (geometry is GeoJsonPolygon) {
+                    Log.e("GEOJSON", "Polygon Coordinates:")
+                    val outerBoundary = geometry.outerBoundaryCoordinates
+                    if (outerBoundary.isNotEmpty()) {
+                        coordinatesString = outerBoundary.joinToString(", ") { latLng ->
+                            "${latLng.latitude},${latLng.longitude}"
+                        }
+
+                        for (latLng in outerBoundary) {
+                            Log.e("GEOJSON", "Lat: ${latLng.latitude}, Lng: ${latLng.longitude}")
+                        }
+
+                        val center = getPolygonCenter(outerBoundary)
+                        currentPolygonMarker?.remove()
+                        currentPolygonMarker = mMap?.addMarker(
+                            MarkerOptions()
+                                .position(center)
+                                .title("Polygon Clicked")
+                                .snippet("Suitability: ${feature.getProperty("name")} Suitability")
+                        )
+                    }
+                }
+            }
+            // Move camera to feature center if needed (no direct containers in GeoJsonLayer)
+            for (feature in geoJsonLayer.features) {
+                val geometry = feature.geometry
+                if (geometry is GeoJsonPolygon) {
+                    val coords = geometry.outerBoundaryCoordinates
+                    if (coords.isNotEmpty()) {
+                        val center = getPolygonCenter(coords)
+                        mMap!!.moveCamera(CameraUpdateFactory.newLatLngZoom(center, 14f))
+                        break // move to first feature for example
+                    }
+                }
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "onMapReady Exception: ${e.message}")
+            e.printStackTrace()
+        }*/
 
     }
 

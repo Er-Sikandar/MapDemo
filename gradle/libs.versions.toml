@@ -8,11 +8,14 @@ espressoCore = "3.6.1"
 appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.10.1"
-maps = "19.1.0"
+maps = "19.2.0"
 location = "21.3.0"
 constraintlayout = "2.2.1"
 places = "4.2.0"
 maps-utils = "3.8.2"
+mockitoVersion = "5.2.0"
+mockitoKotlinVersion = "2.2.0"
+mockitoInlineVersion = "5.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,6 +30,11 @@ androidx-gms-maps = { group = "com.google.android.gms", name = "play-services-ma
 androidx-gms-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "location" }
 androidx-libraries-places = { group = "com.google.android.libraries.places", name = "places", version.ref = "places" }
 androidx-lmaps-utils = { group = "com.google.maps.android", name = "android-maps-utils", version.ref = "maps-utils" }
+
+test-mockito = { group = "org.mockito", name = "mockito-core", version.ref = "mockitoVersion" }
+test-mockito-inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockitoInlineVersion" }
+test-mockito-kotlin = { group = "com.nhaarman.mockitokotlin2", name = "mockito-kotlin", version.ref = "mockitoKotlinVersion" }
+
 
 
 

@@ -1,0 +1,117 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.13, 31.05], [77.14, 31.05], [77.14, 31.06], [77.13, 31.06], [77.13, 31.05]]]
+      },
+      "properties": {
+        "name": "Zone A1",
+        "style": {
+          "fill": "#228B22",
+          "fill-opacity": 0.7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.14, 31.05], [77.15, 31.05], [77.15, 31.06], [77.14, 31.06], [77.14, 31.05]]]
+      },
+      "properties": {
+        "name": "Zone A2",
+        "style": {
+          "fill": "#FFD700",
+          "fill-opacity": 0.7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.15, 31.05], [77.16, 31.05], [77.16, 31.06], [77.15, 31.06], [77.15, 31.05]]]
+      },
+      "properties": {
+        "name": "Zone A3",
+        "style": {
+          "fill": "#FF8C00",
+          "fill-opacity": 0.7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.16, 31.05], [77.17, 31.05], [77.17, 31.06], [77.16, 31.06], [77.16, 31.05]]]
+      },
+      "properties": {
+        "name": "Zone A4",
+        "style": {
+          "fill": "#DC143C",
+          "fill-opacity": 0.7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.13, 31.06], [77.14, 31.06], [77.14, 31.07], [77.13, 31.07], [77.13, 31.06]]]
+      },
+      "properties": {
+        "name": "Zone B1",
+        "style": {
+          "fill": "#FFFF66",
+          "fill-opacity": 0.7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.14, 31.06], [77.15, 31.06], [77.15, 31.07], [77.14, 31.07], [77.14, 31.06]]]
+      },
+      "properties": {
+        "name": "Zone B2",
+        "style": {
+          "fill": "#B22222",
+          "fill-opacity": 0.7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.15, 31.06], [77.16, 31.06], [77.16, 31.07], [77.15, 31.07], [77.15, 31.06]]]
+      },
+      "properties": {
+        "name": "Zone B3",
+        "style": {
+          "fill": "#32CD32",
+          "fill-opacity": 0.7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.16, 31.06], [77.17, 31.06], [77.17, 31.07], [77.16, 31.07], [77.16, 31.06]]]
+      },
+      "properties": {
+        "name": "Zone B4",
+        "style": {
+          "fill": "#FFA500",
+          "fill-opacity": 0.7
+        }
+      }
+    }
+  ]
+}
